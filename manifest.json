@@ -1,0 +1,21 @@
+{
+  "name": "GitNames",
+  "version": "1.0",
+  "manifest_version":2,
+  "description": "Puts real names on github.",
+  "icons": { "128": "Chartboost_icon_144.png" },
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "persistent": false,
+    "page": "background.html"
+  },
+  "content_scripts": [
+  {
+	  "matches": ["https://www.github.com/*","https://github.com/*"],
+	  "run_at": "document_end",
+	  "js": ["jquery-1.9.1.js","crawler.js"]
+  }
+  ]
+}
